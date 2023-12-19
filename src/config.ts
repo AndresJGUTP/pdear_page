@@ -9,22 +9,22 @@ export interface TagType {
 }
 
 export const SiteMetadata = {
-  title: 'Hello Astro',
-  description: 'An Astro starter for corporate/marketing/blog websites.',
+  title: 'Plan Decenal de Educación Ambiental de Risaralda – PDEAR',
+  description: 'Plan Decenal de Educación Ambiental de Risaralda – PDEAR',
   author: {
-    name: 'Chris Tham',
-    twitter: '@chris1tham',
-    url: 'https://christham.net',
-    email: 'chris@christham.net',
-    summary: 'Outrageous actualiser.'
+    name: 'Andrés Jiménez',
+    twitter: '',
+    url: '',
+    email: 'jg.andresjg@gmail.com',
+    summary: ''
   },
   org: {
-    name: 'Hello Tham',
-    twitter: '@hellothamcom',
-    url: 'https://hellotham.com',
-    email: 'info@hellotham.com',
+    name: 'Plan Decenal de Educación Ambiental de Risaralda – PDEAR',
+    twitter: '@adfa',
+    url: 'https://www.risaralda.gov.co/educacion/publicaciones/155046/plan-decenal-de-educacion-ambiental-de-risaralda-pdear/',
+    email: 'correo@correo.com',
     summary:
-      'Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.'
+      'Es el instrumento técnico y político, orientador de los procesos de institucionalización de las apuestas conceptuales, contextuales y proyectivas de la Política Nacional de Educación Ambiental en el Departamento, en el marco de lo planteado en el artículo 5to de la Ley 1549 de 2012.'
   },
   location: 'Rivendell, Middle Earth',
   latlng: [-33.86785, 151.20732] as [number, number],
@@ -39,11 +39,11 @@ export { default as DefaultSVG } from './assets/svg/undraw/undraw_my_feed.svg'
 export { default as DefaultImage } from './assets/undraw/undraw_my_feed.png'
 
 export const NavigationLinks = [
-  { name: 'Home', href: '' },
-  { name: 'About', href: 'about' },
-  { name: 'Contact', href: 'contact' },
-  { name: 'Blog', href: 'blog' },
-  { name: 'Docs', href: 'doc/introduction' }
+  { name: 'Inicio', href: '' },
+  { name: 'Noticias', href: 'blog' },
+  { name: 'Caja De Herramientas', href: 'contact' },
+  { name: 'Galería Fotográfica', href: 'contact' },
+  { name: 'Diplomado', href: 'doc/introduction' }
 ]
 
 export const PAGE_SIZE = 6

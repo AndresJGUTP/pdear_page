@@ -3,28 +3,28 @@ import { Icon } from 'astro-icon'
 
 const features = [
   {
-    name: 'Easy to Create Content',
+    name: 'Participación Interinstitucional',
     description:
-      'Create pages, documentation pages and blog posts using MDX, Markdoc and Markdown. Includes support for photo galleries, maps, math equations (KaTeX) and diagrams (mermaid, plantuml and markmap).',
-    icon: 'sparkles'
+      'Fortalecer las acciones interinstitucionales y la participación de los diferentes actores en los procesos de educación ambiental',
+    icon: 'fa-solid:handshake'
   },
   {
-    name: 'Customisable Design',
+    name: 'Formación + Investigación',
     description:
-      'Built using the TailwindCSS ecosystem (including HeroIcons and Hero Patterns). Very easy to customise and change design. Template illustrations by unDraw.',
-    icon: 'puzzle'
+      'Fortalecer los procesos de formación e investigación en el sector formal de la educación',
+    icon: 'ph:book-fill'
   },
   {
-    name: 'SEO Ready',
+    name: 'Incentivar la educación ambiental',
     description:
-      'Full support for Facebook (Open Graph), Twitter Cards, Schema/JSON-LD metadata. Automatically generated robots.txt, RSS feed and sitemap.',
-    icon: 'presentation-chart-bar'
+      'Fortalecer la estrategia de estímulos e incentivos para la educación ambiental en el sector formal',
+    icon: 'ph:tree-fill'
   },
   {
-    name: 'Blazing Performance',
+    name: 'Estrategia Edu-comunicativa',
     description:
-      'Achieve great web vitals scores. Static site using Jamstack architecture. Built using Astro and Typescript for ultimate performance and type safety.',
-    icon: 'clock'
+      'Estructurar la estrategia edu-comunicativa que permita el cumplimiento del eje de información y comunicación del PDAR',
+    icon: 'mdi:speak'
   }
 ]
 ---
@@ -35,16 +35,15 @@ const features = [
       <h2
         class='text-base font-semibold uppercase tracking-wide text-green-200 dark:text-green-300'
       >
-        Features
+        Convenios
       </h2>
       <p
         class='mt-2 text-3xl font-extrabold leading-8 tracking-tight text-blue-900 dark:text-blue-100 sm:text-4xl'
       >
-        Comprehensive Astro Starter
+        Universidad Tecnológica de Pereira
       </p>
-      <p class='mt-4 max-w-2xl text-xl text-gray-600 dark:text-gray-300 lg:mx-auto'>
-        This is a good starting point for a multi-purpose website, including support for
-        documentation and blog pages, photo galleries, diagrams, math equations and more.
+      <p class='mt-5 max-w-2xl text-xl text-gray-600 dark:text-gray-300 lg:mx-auto'>
+        Para cumplir con las metas establecidas en el escenario de corto plazo del plan, se ha firmado un convenio interadministrativo con la Universidad Tecnológica de Pereira, donde prestó servicios para acompañar la implementación del Plan Decenal de Educación Ambiental de Risaralda 2019 - 2029 durante la vigencia 2023, conforme a lo establecido en la ordenanza No 28 del 2019
       </p>
     </div>
 
@@ -52,13 +51,12 @@ const features = [
       <dl class='space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0'>
         {
           features.map((feature) => (
-            <div class='relative'>
+            <div class='relative intersect:animate-fade-right animate-once animate-ease-in-out'>
               <dt>
                 <div class='absolute flex h-12 w-12 items-center justify-center rounded-md bg-green-500 text-white dark:bg-green-400 dark:text-black'>
                   <Icon
-                    class='h-6 w-6'
+                    class='h-10 w-10'
                     aria-hidden='true'
-                    pack='heroicons-outline'
                     name={feature.icon}
                   />
                 </div>
@@ -74,5 +72,13 @@ const features = [
         }
       </dl>
     </div>
+
+    <div class='mt-10 w-full mx-auto md:w-1/2 intersect:animate-fade-up animate-once animate-ease-out'>
+      <img
+        src="src/assets/gallery/png/LOGO_UTP_GOB.png"
+        class="cover"
+      />
+    </div>
+
   </div>
 </div>

@@ -37,11 +37,12 @@ export { default as LogoImage } from './assets/astro/astro-logo-dark.png'
 export { default as FeaturedSVG } from './assets/svg/undraw/undraw_design_inspiration.svg'
 export { default as DefaultSVG } from './assets/svg/undraw/undraw_my_feed.svg'
 export { default as DefaultImage } from './assets/undraw/undraw_my_feed.png'
+export { default as VideoIntro } from './assets/gallery/videos/video_intro.mp4'
 
 export const NavigationLinks = [
   { name: 'Inicio', href: '' },
   { name: 'Noticias', href: 'blog' },
-  { name: 'Caja De Herramientas', href: 'contact' },
+  { name: 'Caja De Herramientas', href: 'about' },
   { name: 'Galería Fotográfica', href: 'contact' },
   { name: 'Diplomado', href: 'doc/introduction' }
 ]

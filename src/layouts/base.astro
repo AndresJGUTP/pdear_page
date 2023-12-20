@@ -30,6 +30,9 @@ const { frontmatter } = Astro.props
     <link rel='sitemap' href={`${Astro.site}sitemap-indexxml`} />
     <link rel='alternate' type='application/rss+xml' title='RSS' href={`${Astro.site}rss.xml`} />
     <meta name='generator' content={Astro.generator} />
+    
+    <script defer src="https://unpkg.com/tailwindcss-intersect@1.x.x/dist/observer.min.js"></script>
+
     <SEO frontmatter={frontmatter} />
     <ViewTransitions />
     <script is:inline>

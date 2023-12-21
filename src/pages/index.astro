@@ -5,6 +5,7 @@ import { SiteMetadata } from '../config'
 import Base from '../layouts/base.astro'
 import Hero from '../components/hero.astro'
 import Features from '../components/features.astro'
+import CajaHerramientas from '../components/cajaherramientas.astro'
 import FindOutMore from '../components/findoutmore.astro'
 import LatestArticles from '../components/latestarticles.astro'
 import CTA from '../components/cta.astro'
@@ -28,8 +29,9 @@ const latestPosts = posts.sort((a, b) => +b.data.publishDate - +a.data.publishDa
 <Base frontmatter={frontmatter}>
   <Hero />
   <Features />
+  <CajaHerramientas />
   <FindOutMore />
   <LatestArticles posts={latestPosts} />
-  <CTA />
-  <div class='bg-blue-300 p-24 dark:bg-black md:p-12'></div>
+  <!-- <CTA /> -->
+  <!-- <div class='bg-blue-300 p-24 dark:bg-black md:p-12'></div> -->
 </Base>

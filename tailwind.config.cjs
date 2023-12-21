@@ -33,6 +33,9 @@ module.exports = {
         'mono': ['Montserrat', 'monospace'],
         'display': ['Montserrat', 'display'],
         'body': ['Montserrat', 'body'],
+      },
+      gradientColorStopPositions: {
+        33: '33%',
       }
     },
   },

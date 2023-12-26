@@ -82,17 +82,17 @@ import { Logo } from '../config'
     <div
       x-show='isOpen'
       x-cloak
-      x-transition:enter='transition ease-out duration-100 transform'
+      x-transition:enter='animate-fade-down animate-duration-500 animate-ease-linear'
       x-transition:enter-start='opacity-0 scale-95'
       x-transition:enter-end='opacity-100 scale-100'
-      x-transition:leave='transition ease-in duration-75 transform'
+      x-transition:leave='transition ease-in-out duration-700 transform'
       x-transition:leave-start='opacity-100 scale-100'
       x-transition:leave-end='opacity-0 scale-95'
-      class='fixed inset-0 z-40 animate-fade-down overflow-hidden bg-gradient-to-b from-white via-white via-40% to-transparent backdrop-blur-sm animate-duration-[300ms] animate-once animate-ease-linear'
+      class='fixed inset-0 z-40 overflow-hidden bg-gradient-to-b from-green-50 via-green-50 to-transparent backdrop-blur-sm'
       id='mobile-menu'
     >
       <div
-        class='absolute inset-0 z-50 flex flex-col items-center justify-center px-4 py-2 font-semibold dark:border-green-600 dark:bg-gray-800'
+        class='fixed inset-0 z-50 overflow-hidden bg-gradient-to-b from-white via-white via-40% to-transparent transition-transform'
       >
         {
           NavigationLinks.map((item) => (

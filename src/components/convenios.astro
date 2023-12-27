@@ -1,0 +1,85 @@
+---
+import { Icon } from 'astro-icon'
+
+const features = [
+  {
+    name: 'Participación Interinstitucional',
+    description:
+      'Fortalecer las acciones interinstitucionales y la participación de los diferentes actores en los procesos de educación ambiental',
+    icon: 'fa-solid:handshake'
+  },
+  {
+    name: 'Formación + Investigación',
+    description:
+      'Fortalecer los procesos de formación e investigación en el sector formal de la educación',
+    icon: 'ph:book-fill'
+  },
+  {
+    name: 'Incentivar la educación ambiental',
+    description:
+      'Fortalecer la estrategia de estímulos e incentivos para la educación ambiental en el sector formal',
+    icon: 'ph:tree-fill'
+  },
+  {
+    name: 'Estrategia Edu-comunicativa',
+    description:
+      'Estructurar la estrategia edu-comunicativa que permita el cumplimiento del eje de información y comunicación del PDAR',
+    icon: 'mdi:speak'
+  }
+]
+---
+
+<div class='bg-white py-12 dark:bg-gray-800'>
+  <script defer src="https://unpkg.com/tailwindcss-intersect@1.x.x/dist/observer.min.js"></script>
+  <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div class='lg:text-center'>
+      <h2
+        class='text-base font-semibold uppercase tracking-wide text-green-200 dark:text-green-300'
+      >
+        Convenios
+      </h2>
+      <p
+        class='mt-2 text-3xl font-extrabold leading-8 tracking-tight text-blue-900 dark:text-blue-100 sm:text-4xl'
+      >
+        Universidad Tecnológica de Pereira
+      </p>
+      <p class='mt-5 max-w-2xl text-xl text-gray-600 dark:text-gray-300 lg:mx-auto lg:w-5/6 lg:max-w-full'>
+        Para cumplir con las metas establecidas en el escenario de corto plazo del plan, se ha firmado un convenio interadministrativo con la Universidad Tecnológica de Pereira, donde prestó servicios para acompañar la implementación del Plan Decenal de Educación Ambiental de Risaralda 2019 - 2029 durante la vigencia 2023, conforme a lo establecido en la ordenanza No 28 del 2019
+      </p>
+    </div>
+
+    <div class='mt-10'>
+      <dl class='space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0'>
+        {
+          features.map((feature) => (
+            <div class='relative intersect:animate-fade-right animate-once animate-ease-in-out'>
+              <dt>
+                <div class='absolute flex h-12 w-12 items-center justify-center rounded-md bg-green-500 text-white dark:bg-green-400 dark:text-black'>
+                  <Icon
+                    class='h-10 w-10'
+                    aria-hidden='true'
+                    name={feature.icon}
+                  />
+                </div>
+                <p class='ml-16 text-lg font-medium leading-6 text-gray-900 dark:text-gray-200'>
+                  {feature.name}
+                </p>
+              </dt>
+              <dd class='ml-16 mt-2 text-base text-gray-600 dark:text-gray-400'>
+                {feature.description}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+
+    <div class='mt-10 w-full mx-auto md:w-1/2 intersect:animate-fade-up animate-once animate-ease-out'>
+      <img
+        src="src/assets/gallery/png/LOGO_UTP_GOB.png"
+        class="cover"
+      />
+    </div>
+
+  </div>
+</div>

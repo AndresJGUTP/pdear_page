@@ -17,10 +17,14 @@ const { frontmatter } = Astro.props
 <html lang='es'>
   <head>
     <meta charset='UTF-8' />
-    <meta
+    <!-- <meta
       http-equiv='Content-Security-Policy'
-      content="default-src * 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
-    />
+      content="default-src * 'unsafe-eval' 'unsafe-inline'; object-src *"
+    /> -->
+    <!-- <meta
+      http-equiv='Content-Security-Policy'
+      content="default-src * 'unsafe-eval' 'unsafe-inline'; object-src *"
+    /> -->
     <meta http-equiv='Referrer-Policy' content='no-referrer, strict-origin-when-cross-origin' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' href='favicon.png' />
@@ -30,9 +34,9 @@ const { frontmatter } = Astro.props
     <link rel='sitemap' href={`${Astro.site}sitemap-indexxml`} />
     <!-- <link rel='alternate' type='application/rss+xml' title='RSS' href={`${Astro.site}rss.xml`} /> -->
     <meta name='generator' content={Astro.generator} />
-    
-    <script defer src="https://unpkg.com/tailwindcss-intersect@1.x.x/dist/observer.min.js"></script>
 
+    <script src="third_party/pdfThumbnails/pdfThumbnails.js" data-pdfjs-src="third_party/pdfThumbnails/pdf.js/build/pdf.js"></script>
+    
     <SEO frontmatter={frontmatter} />
     <ViewTransitions />
     <script is:inline>
@@ -79,11 +83,9 @@ const { frontmatter } = Astro.props
       </script>
     }
   </head>
-  <body class='dark:bg-gray-900'>
-    <Header />
-    <slot />
-    {frontmatter.gallery && <Gallery folder={frontmatter.gallery} />}
-    <slot name='before-footer' />
+  <body>
+    <Header /> 
+    <slot /> 
     <Footer />
     {
       frontmatter.extra?.includes('markmap') && (

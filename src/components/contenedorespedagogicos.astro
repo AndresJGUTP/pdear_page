@@ -1,0 +1,66 @@
+---
+const callouts = [
+  {
+    name: 'Contenedor Pedagógico #1',
+    description: 'Contextualización y conceptualización de los PRAE en el marco del desarrollo sostenible',
+    imageSrc: 'src/assets/gallery/images/1-pexels-karolina-grabowska-4207909.jpg',
+    imageAlt: 'Astro logo',
+    href: 'https://astro.build',
+    margin: 'lg:mt-0 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in'
+  },
+  {
+    name: 'Contenedor Pedagógico #2',
+    description:
+    'Marco político, legal, estratégico y referencial para la dinamización de los PRAE',
+    imageSrc: 'src/assets/gallery/images/2-pexels-karolina-grabowska-4207905.jpg',
+    imageAlt: 'TailwindCSS drawing',
+    href: 'https://tailwindcss.com',
+    margin: 'lg:mt-10 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in lg:intersect:animate-delay-300',
+  },
+  {
+    name: 'Contenedor Pedagógico #3',
+    description: 'Metodología para la revisión, ajuste y/o actualización de los PRAE',
+    imageSrc: 'src/assets/gallery/images/3-pexels-elina-sazonova-4555305.jpg',
+    imageAlt: 'Core Web',
+    href: 'https://w3.org',
+    margin: 'lg:mt-20 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in lg:intersect:animate-delay-500'
+  }
+]
+---
+
+<div class='bg-white dark:bg-green-900'>
+  <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div class='mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-16'>
+
+      <div class='relative mt-10 h-1/2 lg:grid lg:grid-cols-3 lg:gap-x-6'>
+        {
+          callouts.map((callout) => (
+            <div class={'group relative my-5 cursor-pointer bg-green-50 rounded-2xl h-fit ' + callout.margin}>
+              <img
+                src={callout.imageSrc}
+                alt={callout.imageAlt}
+                class='w-full h-full group-hover:opacity-75  brightness-50 object-contain rounded-lg'
+                loading='lazy'
+              />
+              <div class='absolute top-0 px-5 h-full'>
+                <h3 class='text-center relative text-3xl text-white font-bold my-12 mx-2'>
+                  {callout.name}
+                </h3>
+                <p class='block relative text-justify text-base text-white font-light my-auto mx-2'>
+                  {callout.description}
+                </p>
+                  <button class='block rounded border-white border px-10 py-5 text-white bg-black/50 mx-auto my-20 group-hover:bg-white/50 group-hover:text-black group-hover:font-bold group-hover:animate-wiggle group-hover:animate-twice group-hover:animate-duration-500 group-hover:animate-ease-linear'>
+                    Ver Más  
+                  </button>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 -->
+<!-- style="position: absolute;transform: translateY(-50%);top:50%" -->

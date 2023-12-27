@@ -44,7 +44,7 @@ export const NavigationLinks = [
   { name: 'Noticias', href: 'blog' },
   { name: 'Caja De Herramientas', href: 'about' },
   { name: 'Galería Fotográfica', href: 'contact' },
-  { name: 'Diplomado', href: 'doc/introduction' }
+  { name: 'Diplomado', href: 'diplomado' }
 ]
 
 export const PAGE_SIZE = 6

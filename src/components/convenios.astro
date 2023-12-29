@@ -29,9 +29,9 @@ const features = [
 ]
 ---
 
-<div class='bg-white py-12 dark:bg-gray-800'>
+<div class='bg-white py-12 md:py-0 md:snap-center md:h-[calc(100vh-4rem)]'>
   <script defer src="https://unpkg.com/tailwindcss-intersect@1.x.x/dist/observer.min.js"></script>
-  <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+  <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:flex md:flex-col md:items-center md:justify-around md:h-full'>
     <div class='lg:text-center'>
       <h2
         class='text-base font-semibold uppercase tracking-wide text-green-200 dark:text-green-300'
@@ -48,7 +48,7 @@ const features = [
       </p>
     </div>
 
-    <div class='mt-10'>
+    <div class='mt-10 md:m-0'>
       <dl class='space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0'>
         {
           features.map((feature) => (
@@ -74,7 +74,7 @@ const features = [
       </dl>
     </div>
 
-    <div class='mt-10 w-full mx-auto md:w-1/2 intersect:animate-fade-up animate-once animate-ease-out'>
+    <div class='mt-10 w-full mx-auto md:w-1/2 md:m-0 intersect:animate-fade-up animate-once animate-ease-out'>
       <img
         src="src/assets/gallery/png/LOGO_UTP_GOB.png"
         class="cover"

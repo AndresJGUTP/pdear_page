@@ -1,10 +1,14 @@
 ---
+import ContenedorUnoImage from '/src/assets/gallery/images/1-pexels-karolina-grabowska-4207909.jpg'
+import ContenedorDosImage from '/src/assets/gallery/images/2-pexels-karolina-grabowska-4207905.jpg'
+import ContenedorTresImage from '/src/assets/gallery/images/3-pexels-elina-sazonova-4555305.jpg'
+
 const callouts = [
   {
     name: 'Contenedor Pedagógico #1',
     description: 'Contextualización y conceptualización de los PRAE en el marco del desarrollo sostenible',
-    imageSrc: 'src/assets/gallery/images/1-pexels-karolina-grabowska-4207909.jpg',
-    imageAlt: 'Astro logo',
+    imageSrc: ContenedorUnoImage,
+    imageAlt: 'Contenedor Uno IMG',
     href: 'https://astro.build',
     margin: 'lg:mt-0 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in'
   },
@@ -12,32 +16,32 @@ const callouts = [
     name: 'Contenedor Pedagógico #2',
     description:
     'Marco político, legal, estratégico y referencial para la dinamización de los PRAE',
-    imageSrc: 'src/assets/gallery/images/2-pexels-karolina-grabowska-4207905.jpg',
-    imageAlt: 'TailwindCSS drawing',
+    imageSrc: ContenedorDosImage,
+    imageAlt: 'Contenedor Dos IMG',
     href: 'https://tailwindcss.com',
     margin: 'lg:mt-10 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in lg:intersect:animate-delay-300',
   },
   {
     name: 'Contenedor Pedagógico #3',
     description: 'Metodología para la revisión, ajuste y/o actualización de los PRAE',
-    imageSrc: 'src/assets/gallery/images/3-pexels-elina-sazonova-4555305.jpg',
-    imageAlt: 'Core Web',
+    imageSrc: ContenedorTresImage,
+    imageAlt: 'Contenedor Tres IMG',
     href: 'https://w3.org',
     margin: 'lg:mt-20 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in lg:intersect:animate-delay-500'
   }
 ]
 ---
 
-<div class='bg-white dark:bg-green-900'>
-  <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-    <div class='mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-16'>
+<div class='relative bg-white md:snap-center md:h-full'>
+  <div class=' m-auto max-w-7xl px-4 sm:px-6 md:h-full md:flex'>
+    <div class='mx-auto max-w-2xl py-5 sm:py-24 md:py-0 md:max-w-none md:h-fit md:my-auto md:pt-16 lg:pt-0'>
 
-      <div class='relative mt-10 h-1/2 lg:grid lg:grid-cols-3 lg:gap-x-6'>
+      <div class='relative h-1/2 md:grid md:grid-cols-3 md:gap-x-6 md:h-fit'>
         {
           callouts.map((callout) => (
-            <div class={'group relative my-5 cursor-pointer bg-green-50 rounded-2xl h-fit ' + callout.margin}>
+            <div class={'group relative cursor-pointer my-10 bg-green-50 rounded-2xl h-fit md:my-10 ' + callout.margin}>
               <img
-                src={callout.imageSrc}
+                src={callout.imageSrc.src}
                 alt={callout.imageAlt}
                 class='w-full h-full group-hover:opacity-75  brightness-50 object-contain rounded-lg'
                 loading='lazy'

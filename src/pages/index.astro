@@ -8,14 +8,11 @@ import Convenios from '../components/convenios.astro'
 import CajaHerramientas from '../components/cajaherramientas.astro'
 import ContenedoresPedagogicos from '../components/contenedorespedagogicos.astro'
 import LatestArticles from '../components/latestarticles.astro'
-import coverSVG from '../assets/svg/undraw/undraw_design_inspiration.svg'
-import socialImage from '../assets/undraw/undraw_design_inspiration.png'
+
 
 const frontmatter: Frontmatter = {
   title: SiteMetadata.title,
   description: SiteMetadata.description,
-  coverSVG: coverSVG,
-  socialImage: socialImage,
   publishDate: SiteMetadata.buildTime
 }
 
@@ -26,7 +23,6 @@ const latestPosts = posts.sort((a, b) => +b.data.publishDate - +a.data.publishDa
 ---
 
 <Base frontmatter={frontmatter}>
-  <!-- <div id="content" class="md:overflow-y-scroll md:snap md:snap-y md:no-scrollbar md:snap-mandatory" style="height: calc(100vh - 4rem);"> -->
   <div id="content" class="md:overflow-y-scroll md:h-[calc(100vh-4rem)] md:snap md:snap-y md:no-scrollbar md:snap-mandatory">
     <Intro />
     <Convenios />

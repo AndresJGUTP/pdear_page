@@ -23,16 +23,16 @@ const latestPosts = posts.sort((a, b) => +b.data.publishDate - +a.data.publishDa
 ---
 
 <Base frontmatter={frontmatter}>
-  <div id="content" class="md:overflow-y-scroll md:h-[calc(100vh-4rem)] md:snap md:snap-y md:no-scrollbar md:snap-mandatory">
+  <div id="content" class="md:overflow-y-scroll md:h-[calc(100vh-4rem)] ">
     <Intro />
     <Convenios />
     <CajaHerramientas />
     <ContenedoresPedagogicos />
-    <!-- <LatestArticles posts={latestPosts} /> -->
+    <LatestArticles posts={latestPosts} />
     <!-- <CTA /> -->
     <!-- <div class='bg-blue-300 p-24 dark:bg-black md:p-12'></div> -->
   </div>
-  <script>
+  <!-- <script>
     const content = document.getElementById("content");
     content!.addEventListener("wheel", (event) => {
        event.preventDefault();
@@ -45,5 +45,5 @@ const latestPosts = posts.sort((a, b) => +b.data.publishDate - +a.data.publishDa
         });
     }
   })
- </script>
+ </script> -->
 </Base>

@@ -9,8 +9,8 @@ const callouts = [
     description: 'Contextualización y conceptualización de los PRAE en el marco del desarrollo sostenible',
     imageSrc: ContenedorUnoImage,
     imageAlt: 'Contenedor Uno IMG',
-    href: 'https://astro.build',
-    margin: 'lg:mt-0 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in'
+    href: '/contenedor_pedagogico/contenedor_1/',
+    margin: 'lg:mt-0 intersect:animate-fade-dowm intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in'
   },
   {
     name: 'Contenedor Pedagógico #2',
@@ -18,18 +18,19 @@ const callouts = [
     'Marco político, legal, estratégico y referencial para la dinamización de los PRAE',
     imageSrc: ContenedorDosImage,
     imageAlt: 'Contenedor Dos IMG',
-    href: 'https://tailwindcss.com',
-    margin: 'lg:mt-10 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in lg:intersect:animate-delay-300',
+    href: '/contenedor_pedagogico/contenedor_2/',
+    margin: 'lg:mt-10 intersect:animate-fade-dowm intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in lg:intersect:animate-delay-300',
   },
   {
     name: 'Contenedor Pedagógico #3',
     description: 'Metodología para la revisión, ajuste y/o actualización de los PRAE',
     imageSrc: ContenedorTresImage,
     imageAlt: 'Contenedor Tres IMG',
-    href: 'https://w3.org',
-    margin: 'lg:mt-20 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in lg:intersect:animate-delay-500'
+    href: '/contenedor_pedagogico/contenedor_3/',
+    margin: 'lg:mt-20 intersect:animate-fade-dowm intersect:animate-once intersect:animate-duration-[300ms] intersect:animate-ease-in lg:intersect:animate-delay-500'
   }
 ]
+
 ---
 
 <div class='relative bg-white md:snap-center md:h-full'>
@@ -39,25 +40,29 @@ const callouts = [
       <div class='relative h-1/2 md:grid md:grid-cols-3 md:gap-x-6 md:h-fit'>
         {
           callouts.map((callout) => (
-            <div class={'group relative cursor-pointer my-10 bg-green-50 rounded-2xl h-fit md:my-10 ' + callout.margin}>
+            <a 
+              href={callout.href}
+            >
+            <div class={'group relative cursor-pointer my-10 rounded-2xl h-fit md:my-10 ' + callout.margin}>
               <img
-                src={callout.imageSrc.src}
-                alt={callout.imageAlt}
-                class='w-full h-full group-hover:opacity-75  brightness-50 object-contain rounded-lg'
-                loading='lazy'
+              src={callout.imageSrc.src}
+              alt={callout.imageAlt}
+              class='w-full h-full group-hover:opacity-75 brightness-50 object-contain rounded-lg'
+              loading='lazy'
               />
               <div class='absolute top-0 px-5 h-full'>
                 <h3 class='text-center relative text-3xl text-white font-bold my-12 mx-2'>
                   {callout.name}
-                </h3>
-                <p class='block relative text-justify text-base text-white font-light my-auto mx-2'>
-                  {callout.description}
-                </p>
-                  <button class='block rounded border-white border px-10 py-5 text-white bg-black/50 mx-auto my-20 group-hover:bg-white/50 group-hover:text-black group-hover:font-bold group-hover:animate-wiggle group-hover:animate-twice group-hover:animate-duration-500 group-hover:animate-ease-linear'>
-                    Ver Más  
-                  </button>
-              </div>
+                  </h3>
+                  <p class='block relative text-justify text-base text-white font-light my-auto mx-2'>
+                    {callout.description}
+                    </p>
+                    <button class='block rounded border-white border px-10 py-5 text-white bg-black/50 mx-auto my-20 group-hover:bg-white/50 group-hover:text-black group-hover:font-bold group-hover:animate-wiggle group-hover:animate-twice group-hover:animate-duration-500 group-hover:animate-ease-linear'>
+                      Ver Más  
+                      </button>
+                      </div>
             </div>
+            </a>
           ))
         }
       </div>

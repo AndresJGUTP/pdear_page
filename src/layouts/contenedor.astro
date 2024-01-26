@@ -70,7 +70,7 @@ dirToJSON(contenedor_path, function(err: any, results: any) {
     x-data='{isOpen: false}'
   > 
     <aside title='Site Navigation' 
-    class="hidden fixed w-1/2 z-50 md:block"
+    class="hidden fixed z-50 md:block md:relative"
     x-bind:class="{'hidden': !isOpen }"
     >
       <LeftSidebar currentPage={currentPage} items={dir_json} />
@@ -93,7 +93,7 @@ dirToJSON(contenedor_path, function(err: any, results: any) {
         />
     </button>
     <div 
-      class='w-full h-100  md:ml-10 p-5 bg-white shadow-lg my-5 relative backdrop-blur-sm'
+      class='w-full h-100 mx-5 md:mx-10 p-5 bg-white shadow-lg my-5 relative'
       x-bind:class="{'blur-sm': isOpen}"
       >
         <div 

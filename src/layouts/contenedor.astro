@@ -4,6 +4,7 @@ import Base from './base.astro'
 import LeftSidebar from '../components/leftsidebar.astro'
 import fs from 'node:fs';
 import path from 'node:path';
+import { Icon } from 'astro-icon'
 
 type Props = {
   frontmatter: Frontmatter,
@@ -65,12 +66,36 @@ dirToJSON(contenedor_path, function(err: any, results: any) {
 
 <Base frontmatter={frontmatter}>
   <main
-    class='h-full px-0 bg-gray-100 flex relative md:snap-center md:h-[calc(100vh-4rem)]'
+    class='h-full px-0 bg-gray-100 flex relative md:snap-center h-[calc(100vh-4rem)]'
+    x-data='{isOpen: false}'
   > 
-    <aside title='Site Navigation'>
+    <aside title='Site Navigation' 
+    class="hidden fixed w-1/2 z-50 md:block"
+    x-bind:class="{'hidden': !isOpen }"
+    >
       <LeftSidebar currentPage={currentPage} items={dir_json} />
     </aside>
-    <div class='w-full h-100 ml-10 p-5 bg-white shadow-lg my-5 relative'>
+    <button 
+      class="md:hidden"
+      x-on:click='isOpen = !isOpen'
+      > 
+        <Icon
+          x-bind:class="{'hidden': isOpen }"
+          class='block h-6 w-6'
+          pack='line-md'
+          name=arrow-open-right
+        />
+        <Icon
+          x-bind:class="{'hidden': !isOpen }"
+          class='block h-6 w-6'
+          pack='line-md'
+          name=arrow-open-left
+        />
+    </button>
+    <div 
+      class='w-full h-100  md:ml-10 p-5 bg-white shadow-lg my-5 relative backdrop-blur-sm'
+      x-bind:class="{'blur-sm': isOpen}"
+      >
         <div 
           style="background-image: url('/src/assets/gallery/png/forest_trees_2.png')"
           class="bg-bottom bg-contain h-2/3 bottom-0 left-0 absolute  w-full bg-repeat-x z-0" 
